@@ -39,7 +39,7 @@ def gen_index_content():
         content_text = content_text + '<div class="gor"><li>' + one_prophecie.rstrip(' ') + '</li></div>'
     content_text += """</ul> 
     </hr>
-    <a href="about.html">О чем все это</a>"""
+    <a href="about.html">О реализации</a>"""
     return content_text
 
 def gen_about_content():
@@ -82,8 +82,8 @@ today = dt.now().date()
 save_page(title = "Ваши предсказания на " + str(today), 
           header = "Что день " + str(today) + " готовит", 
           content = gen_index_content(), 
-          output="index1.html")
+          output="index.html")
 save_page(title = "О чем все это", 
           header = "Идеи для предсказаний", 
           content = gen_about_content(), 
-          output="about1.html")
+          output="about.html")
